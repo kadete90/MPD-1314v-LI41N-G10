@@ -1,0 +1,24 @@
+@startuml
+annotation java.lang.annotation.Retention
+annotation java.lang.annotation.Target
+annotation pt.isel.deetc.g10.sqlmapper.annotations.DatabaseField
+annotation pt.isel.deetc.g10.sqlmapper.annotations.DatabaseTable
+annotation pt.isel.deetc.g10.sqlmapper.annotations.ForeignKey
+annotation pt.isel.deetc.g10.sqlmapper.annotations.PrimaryKey
+class java.lang.annotation.ElementType
+class java.lang.annotation.RetentionPolicy
+pt.isel.deetc.g10.sqlmapper.annotations.DatabaseField ..> java.lang.annotation.Retention
+pt.isel.deetc.g10.sqlmapper.annotations.DatabaseField ..> java.lang.annotation.Target
+pt.isel.deetc.g10.sqlmapper.annotations.DatabaseField ..> java.lang.annotation.ElementType
+pt.isel.deetc.g10.sqlmapper.annotations.DatabaseField ..> java.lang.annotation.RetentionPolicy
+pt.isel.deetc.g10.sqlmapper.annotations.DatabaseTable ..> java.lang.annotation.Retention
+pt.isel.deetc.g10.sqlmapper.annotations.DatabaseTable ..> java.lang.annotation.Target
+pt.isel.deetc.g10.sqlmapper.annotations.DatabaseTable ..> java.lang.annotation.ElementType
+pt.isel.deetc.g10.sqlmapper.annotations.DatabaseTable ..> java.lang.annotation.RetentionPolicy
+pt.isel.deetc.g10.sqlmapper.annotations.ForeignKey ..> java.lang.annotation.Retention
+pt.isel.deetc.g10.sqlmapper.annotations.ForeignKey ..> java.lang.annotation.Target
+pt.isel.deetc.g10.sqlmapper.annotations.ForeignKey ..> java.lang.annotation.ElementType
+pt.isel.deetc.g10.sqlmapper.annotations.ForeignKey ..> java.lang.annotation.RetentionPolicy
+pt.isel.deetc.g10.sqlmapper.annotations.PrimaryKey ..> java.lang.annotation.Retention
+pt.isel.deetc.g10.sqlmapper.annotations.PrimaryKey ..> java.lang.annotation.RetentionPolicy
+@enduml

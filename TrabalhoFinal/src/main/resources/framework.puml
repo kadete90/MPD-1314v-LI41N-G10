@@ -1,0 +1,39 @@
+@startuml
+abstract class pt.isel.deetc.g10.sqlmapper.fw.AbstractDataMapper
+
+class pt.isel.deetc.g10.sqlmapper.Binder.Binder
+class pt.isel.deetc.g10.sqlmapper.Binder.IBinder
+class pt.isel.deetc.g10.sqlmapper.Binder.SqlConverter
+class pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializer
+class pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializerImplementation
+class pt.isel.deetc.g10.sqlmapper.fw.Builder
+class pt.isel.deetc.g10.sqlmapper.fw.GenericDataMapper
+class pt.isel.deetc.g10.sqlmapper.fw.SqlIterable
+class pt.isel.deetc.g10.sqlmapper.sqlExecutor.AbstractSqlExecutor
+interface pt.isel.deetc.g10.sqlmapper.fw.DataMapper
+interface pt.isel.deetc.g10.sqlmapper.fw.ISqlIterable
+interface pt.isel.deetc.g10.sqlmapper.sqlExecutor.ISqlExecutor
+pt.isel.deetc.g10.sqlmapper.fw.AbstractDataMapper ..> pt.isel.deetc.g10.sqlmapper.Binder.SqlConverter
+pt.isel.deetc.g10.sqlmapper.fw.AbstractDataMapper ..> pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializer
+pt.isel.deetc.g10.sqlmapper.fw.AbstractDataMapper ..> pt.isel.deetc.g10.sqlmapper.sqlExecutor.AbstractSqlExecutor
+pt.isel.deetc.g10.sqlmapper.fw.AbstractDataMapper --|> pt.isel.deetc.g10.sqlmapper.fw.DataMapper
+pt.isel.deetc.g10.sqlmapper.fw.AbstractDataMapper --|> pt.isel.deetc.g10.sqlmapper.sqlExecutor.ISqlExecutor
+pt.isel.deetc.g10.sqlmapper.fw.Builder ..> pt.isel.deetc.g10.sqlmapper.Binder.Binder
+pt.isel.deetc.g10.sqlmapper.fw.Builder ..> pt.isel.deetc.g10.sqlmapper.Binder.IBinder
+pt.isel.deetc.g10.sqlmapper.fw.Builder ..> pt.isel.deetc.g10.sqlmapper.Binder.SqlConverter
+pt.isel.deetc.g10.sqlmapper.fw.Builder ..> pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializer
+pt.isel.deetc.g10.sqlmapper.fw.Builder ..> pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializerImplementation
+pt.isel.deetc.g10.sqlmapper.fw.Builder ..> pt.isel.deetc.g10.sqlmapper.annotations.DatabaseTable
+pt.isel.deetc.g10.sqlmapper.fw.Builder ..> pt.isel.deetc.g10.sqlmapper.annotations.ForeignKey
+pt.isel.deetc.g10.sqlmapper.fw.Builder ..> pt.isel.deetc.g10.sqlmapper.annotations.PrimaryKey
+pt.isel.deetc.g10.sqlmapper.fw.Builder ..> pt.isel.deetc.g10.sqlmapper.sqlExecutor.AbstractSqlExecutor
+pt.isel.deetc.g10.sqlmapper.fw.GenericDataMapper --|> pt.isel.deetc.g10.sqlmapper.fw.AbstractDataMapper
+pt.isel.deetc.g10.sqlmapper.fw.GenericDataMapper ..> pt.isel.deetc.g10.sqlmapper.Binder.SqlConverter
+pt.isel.deetc.g10.sqlmapper.fw.GenericDataMapper ..> pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializer
+pt.isel.deetc.g10.sqlmapper.fw.GenericDataMapper ..> pt.isel.deetc.g10.sqlmapper.sqlExecutor.AbstractSqlExecutor
+pt.isel.deetc.g10.sqlmapper.fw.SqlIterable ..> pt.isel.deetc.g10.sqlmapper.Binder.SqlConverter
+pt.isel.deetc.g10.sqlmapper.fw.SqlIterable ..> pt.isel.deetc.g10.sqlmapper.sqlExecutor.AbstractSqlExecutor
+pt.isel.deetc.g10.sqlmapper.fw.SqlIterable --|> pt.isel.deetc.g10.sqlmapper.fw.ISqlIterable
+pt.isel.deetc.g10.sqlmapper.fw.DataMapper --|> pt.isel.deetc.g10.sqlmapper.sqlExecutor.ISqlExecutor
+
+@enduml

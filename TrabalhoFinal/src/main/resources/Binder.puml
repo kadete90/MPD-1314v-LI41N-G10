@@ -1,0 +1,12 @@
+@startuml
+class pt.isel.deetc.g10.sqlmapper.Binder.BindFields
+class pt.isel.deetc.g10.sqlmapper.Binder.BindProperties
+class pt.isel.deetc.g10.sqlmapper.Binder.Binder
+class pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializerImplementation
+interface pt.isel.deetc.g10.sqlmapper.Binder.IBinder
+interface pt.isel.deetc.g10.sqlmapper.Binder.SqlConverter
+interface pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializer
+pt.isel.deetc.g10.sqlmapper.Binder.BindFields --|> pt.isel.deetc.g10.sqlmapper.Binder.IBinder
+pt.isel.deetc.g10.sqlmapper.Binder.BindProperties --|> pt.isel.deetc.g10.sqlmapper.Binder.IBinder
+pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializerImplementation --|> pt.isel.deetc.g10.sqlmapper.Binder.SqlSerializer
+@enduml
